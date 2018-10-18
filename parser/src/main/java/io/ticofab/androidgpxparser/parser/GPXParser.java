@@ -1,5 +1,6 @@
 package io.ticofab.androidgpxparser.parser;
 
+import android.text.TextUtils;
 import android.util.Xml;
 
 import org.joda.time.DateTime;
@@ -316,8 +317,12 @@ public class GPXParser {
 
     private Double readElevation(XmlPullParser parser) throws IOException, XmlPullParserException {
         parser.require(XmlPullParser.START_TAG, ns, TAG_ELEVATION);
-        Double ele = Double.valueOf(readText(parser));
-        parser.require(XmlPullParser.END_TAG, ns, TAG_ELEVATION);
+        Double ele = 0d;
+        String elevation = readText(parser);
+        if (TextUtils.isEmpty(elevation)) {
+            ele = Double.valueOf(elevation);
+            parser.require(XmlPullParser.END_TAG, ns, TAG_ELEVATION);
+        }
         return ele;
     }
 
