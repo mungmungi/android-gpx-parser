@@ -4,16 +4,16 @@ ext {
     bintrayRepo = 'maven'
     bintrayName = 'android-gpx-parser'
 
-    publishedGroupId = 'io.ticofab.androidgpxparser'
+    publishedGroupId = 'com.github.mungmungi.androidgpxparser'
     libraryName = 'AndroidGpxParser'
     artifact = 'parser'
 
     libraryDescription = 'A simple XML parser for GPX files, built for Android.'
 
-    siteUrl = 'https://github.com/ticofab/android-gpx-parser'
-    gitUrl = 'https://github.com/ticofab/android-gpx-parser.git'
+    siteUrl = 'https://github.com/mungmungi/android-gpx-parser'
+    gitUrl = 'https://github.com/mungmungi/android-gpx-parser.git'
 
-    libraryVersion = '1.2.0'
+    libraryVersion = '1.2.1'
 
     developerId = 'ticofab'
     developerName = 'Fabio Tiriticco'
